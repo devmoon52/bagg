@@ -16,7 +16,6 @@ const FeaturedProductPage = () => {
   const { types } = useSelector(productSelector);
   const cart = useSelector((state) => state.products.cart);
   const { featured } = types;
-  console.log(featured);
 
   const timerRef = useRef(null);
   const dispatch = useDispatch();

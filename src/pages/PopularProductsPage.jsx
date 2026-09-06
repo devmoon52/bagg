@@ -16,7 +16,6 @@ const PopularProductsPage = () => {
   const { types } = useSelector(productSelector);
   const cart = useSelector((state) => state.products.cart);
   const { popular } = types;
-  console.log(popular);
 
   const timerRef = useRef(null);
   const dispatch = useDispatch();
@@ -89,9 +88,7 @@ const PopularProductsPage = () => {
 
   return (
     <main className={`md:space-y-10 space-y-8 ${selected && "md:my-8 my-6"}`}>
-      <title>
-        Popular products | Bagg - explore popular products
-      </title>
+      <title>Popular products | Bagg - explore popular products</title>
 
       {selected && (
         <section className="md:px-3 px-1.5">

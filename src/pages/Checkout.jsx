@@ -34,12 +34,6 @@ const Checkout = () => {
   const timerRef = useRef(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log({ checkout, purchaseHistory, cart });
-
-    return () => {};
-  }, [checkout, purchaseHistory, cart]);
-
   const {
     register,
     handleSubmit,
@@ -86,8 +80,7 @@ const Checkout = () => {
             id: Date.now(),
             icon: "checkCircle",
             heading: "Order created successfully",
-            message:
-              `Your order has been created successfully on $${dataToSubmit.grantTotal}. We’ll start processing it shortly.`,
+            message: `Your order has been created successfully on $${dataToSubmit.grantTotal}. We’ll start processing it shortly.`,
             date: "1",
             dateType: "day",
             isNew: true,

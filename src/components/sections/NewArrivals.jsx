@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 
 const NewArrivals = () => {
-  console.log("new arrivals");
   const [index, setIndex] = useState(1);
 
   const { types } = useSelector(productSelector);

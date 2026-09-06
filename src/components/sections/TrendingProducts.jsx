@@ -16,7 +16,6 @@ import { setSuccessMessage } from "../../redux/slices/globalSlice";
 import { getDiscountedPrice } from "../../utils/services";
 
 const TrendingProducts = () => {
-  console.log("trending products");
   const [loading, setLoading] = useState(new Set());
 
   const { types } = useSelector(productSelector);

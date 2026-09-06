@@ -59,8 +59,6 @@ const CategoryWise = () => {
     return map;
   }, [currentCategoryProducts]);
 
-  // console.log(categoryProductsMap);
-
   // cart map
   const cartMap = useMemo(() => {
     let map = {};
@@ -106,7 +104,6 @@ const CategoryWise = () => {
   }, []);
 
   const selected = categoryProductsMap[proId] || null;
-  console.log(currentCategory);
 
   useEffect(() => {
     document.title = `${currentCategory?.categoryName} | Category products - bagg`;
@@ -114,7 +111,6 @@ const CategoryWise = () => {
 
   return (
     <div>
-
       <ScrollToTop />
       <Header />
 

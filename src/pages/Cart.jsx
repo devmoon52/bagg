@@ -52,8 +52,6 @@ const Cart = () => {
     return +total.toFixed(2);
   }
 
-  console.log(checkout);
-
   function checkoutAction() {
     const totalPrice = getTotalPrice();
     const toPurchase = cart.map((p) => p.id);
