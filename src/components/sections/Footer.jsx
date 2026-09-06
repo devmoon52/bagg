@@ -149,7 +149,7 @@ const Footer = () => {
                   <li key={link.id}>
                     <NavLink
                       className={`text-gray-600 text-sm hover:text-black`}
-                      to={link.url}
+                      to={""} // link.url will be replaced here
                     >
                       {link.link_to}
                     </NavLink>
