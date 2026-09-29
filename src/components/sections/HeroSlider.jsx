@@ -168,9 +168,11 @@ const HeroSlider = () => {
                 key={slide.key}
                 src={slide.image}
                 alt={slide.alt}
+                width={1280}
+                height={640}
                 fetchPriority={i === 1 ? "high" : "auto"}
                 loading={i === 1 ? "eager" : "lazy"}
-                className="w-full shrink-0"
+                className="w-full h-full object-cover object-center shrink-0"
               />
             );
           })}

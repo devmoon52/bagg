@@ -93,7 +93,7 @@ const Categories = () => {
             onScroll={handleScroll}
             className="flex items-center gap-3 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
           >
-            {categories.map((category) => (
+            {categories.map((category, i) => (
               <li
                 ref={cardRef}
                 key={category.id}
@@ -106,8 +106,10 @@ const Categories = () => {
                   <div>
                     <img
                       src={category.categoryImage}
-                      loading="lazy"
-                      fetchPriority="auto"
+                      height={182}
+                      width={182}
+                      loading={i < 6 ? "eager" : "lazy"}
+                      fetchPriority={i < 6 ? "high" : "auto"}
                       alt={`${category.categoryName} product`}
                     />
                   </div>

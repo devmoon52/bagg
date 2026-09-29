@@ -8,8 +8,11 @@ import { update_checkout } from "../../redux/slices/productSlice";
 import { useNavigate, NavLink } from "react-router-dom";
 
 const containerVariant = {
-  hidden: {},
+  hidden: {
+    opacity: 0,
+  },
   visible: {
+    opacity: 1,
     transition: {
       staggerChildren: 0.2,
     },
@@ -99,12 +102,15 @@ const FlashSale = () => {
           variants={containerVariant}
           initial="hidden"
           animate="visible"
+          transition={{ duration: 0.35 }}
           className="grow md:aspect-4/2 aspect-4/3 rounded-md overflow-hidden relative"
         >
           {/* product image */}
           <img
-            loading="lazy"
+            loading="eager"
             fetchPriority="auto"
+            width={872}
+            height={436}
             src={product.flash.flashBanner}
             className="h-full w-full object-cover object-center"
             alt={product.name}
